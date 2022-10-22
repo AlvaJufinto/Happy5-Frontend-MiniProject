@@ -10,6 +10,10 @@ import PlusIcon from "../assets/icon/plus-icon.svg";
 interface IState {
   year: string,
   period: string,
+  tasks?: {
+    title: string,
+    percentage: string,
+  }[]
 }
 
 const StyledInfoContainer = styled.div`
@@ -31,7 +35,7 @@ const StyledInfoContainer = styled.div`
 
 `
 
-const InfoContainer: FC<IState> = ({ year, period }) => {
+const InfoContainer: FC<IState> = ({ year, period, tasks }) => {
   return (
     <StyledInfoContainer>
         <div className="InfoContainer-Info">
@@ -39,7 +43,10 @@ const InfoContainer: FC<IState> = ({ year, period }) => {
             <Text text={period} textType={TextType.Ordinary} />
         </div>  
         <div className="InfoContainer-Cards">
-          <InfoCard title='Re-designed the zero-g doggie bags. No more spills!' percentage='20%' />
+          {!tasks && <Text text="No Task Available" textType={TextType.Empty} />}
+          {tasks?.map((task) => (
+            <InfoCard title={task.title} percentage={task.percentage} />
+          ))}
         </div>
         <ButtonIconText text="Create new task" logo={PlusIcon} />
     </StyledInfoContainer>

@@ -4,10 +4,11 @@ import styled from 'styled-components';
 import InfoContainer from '../organisms/InfoContainer';
 
 const StyledRoadmapContainer = styled.div`
-    margin: 24px 0;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+  margin: 24px 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: flex-start;  
 `
 
 const RoadmapContainer: FC = () => {
@@ -15,7 +16,7 @@ const RoadmapContainer: FC = () => {
     {
       year: 'Q1 2019',
       period: 'January - March',
-      Tasks: [
+      tasks: [
         {
           title: 'Re-designed the zero-g doggie bags. No more spills!',
           percentage: '64%'
@@ -27,14 +28,13 @@ const RoadmapContainer: FC = () => {
       ]
     },
     {
-      year: 'Q1 2019',
+      year: 'Q2 2019',
       period: 'April - June',
-      Tasks: [],
     },
     {
-      year: 'Q1 2019',
+      year: 'Q3 2019',
       period: 'July - September',
-      Tasks: [
+      tasks: [
         {
           title: 'Bundle interplanetary analytics for improved transmission',
           percentage: '90%'
@@ -42,9 +42,9 @@ const RoadmapContainer: FC = () => {
       ]
     },
     {
-      year: 'Q1 2019',
+      year: 'Q4 2019',
       period: 'October - December',
-      Tasks: [
+      tasks: [
         {
           title: 'Data Migration: Performance & Culture End Game',
           percentage: '63%'
@@ -56,7 +56,7 @@ const RoadmapContainer: FC = () => {
   return (
     <StyledRoadmapContainer>
         {productRoadmap.map(product => (
-          <InfoContainer year="Q1 2019" period="January - March" />
+          <InfoContainer year={product.year} period={product.period} tasks={product.tasks} />
         ))}
     </StyledRoadmapContainer>
   );
