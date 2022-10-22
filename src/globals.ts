@@ -17,8 +17,10 @@ export const theme = {
   colors: {
     black: '#2F3136',
     white: '#ffffff',
-    blue: '#1A0931',
-    purple: '#5E20B3',
+    purple: {
+      primary: '#1A0931',
+      secondary: '#5E20B3' 
+    },
     grey: {
       primary: '#5D6372',
       secondary: '#B7BDC9',
