@@ -1,19 +1,27 @@
 import { FC } from 'react';
+import styled from 'styled-components';
 
 interface IState {
   image: string,
   imageWidth?: string,
   imageHeight?: string,
-  imageCircle?: boolean,
+  borderRadius?: string,
 }
 
-const ImageContainer: FC<IState> = ({ image, imageWidth, imageHeight, imageCircle }) => {
+const StyledImageContainer = styled.img`
+  height: ${(props) => props.height};
+  width: ${(props) => props.width};
+`
+
+const ImageContainer: FC<IState> = ({ image, imageWidth, imageHeight, borderRadius }) => {
   return (
-    <img className="ImageContainer" src={image} alt="JustImage" style={{
-      width: imageWidth,
-      height: imageHeight,
-      borderRadius: imageCircle ? '50%' : '0%',
-    }} />
+    <StyledImageContainer 
+      className="ImageCont  ainer" 
+      src={image}
+      alt="JustImage" 
+      width={imageWidth}
+      height={imageHeight}
+    />
   );
 }
 

@@ -1,12 +1,14 @@
 import { FC } from 'react';
+import styled from 'styled-components';
 
 import ImageContainer from '../atoms/ImageContainer';
 
-interface IState {
-  image: string;
-}
 
-const SideBar: FC<IState> = ({ image }) => {
+const styledSidebar = styled.div`
+  
+`
+
+const SideBar: FC= () => {
   return (
     <div className="SideBar">
         {/* ImageContainer */}

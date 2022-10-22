@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: teal;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
   }
 
@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
 export const theme = {
   colors: {
+    black: '#2F3136',
     white: '#ffffff',
     blue: '#1A0931',
     purple: '#5E20B3',
