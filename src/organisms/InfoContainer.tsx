@@ -14,7 +14,7 @@ interface IState {
 
 const StyledInfoContainer = styled.div`
   border: 1px solid ${props => props.theme.colors.grey.quarternary};
-  width: 300px;
+  width: 280px;
   border-radius: 4px;
   padding: 12px;
 
@@ -23,6 +23,10 @@ const StyledInfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
   }
 
 `

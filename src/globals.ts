@@ -8,9 +8,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
   }
 
-  .global-container-page {
-    padding: 20px 50px 20px 120px;
-  }
 `;
 
 export const theme = {

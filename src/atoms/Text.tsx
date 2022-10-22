@@ -24,7 +24,7 @@ const StyledText = styled.p`
   }
 
   &.Text-title {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: ${props => props.theme.colors.black};
   }
