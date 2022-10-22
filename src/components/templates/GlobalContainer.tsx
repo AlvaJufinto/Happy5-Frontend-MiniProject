@@ -1,6 +1,8 @@
 import { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 
+import SideBar from '../organisms/Sidebar';
+
 interface IState {
     children: ReactNode;
 }
@@ -15,6 +17,7 @@ const StyledGlobalContainer = styled.div`
 const GlobalContainer: FC<IState> = ({ children }) => {
   return (
     <StyledGlobalContainer>
+        <SideBar />
         {children}
     </StyledGlobalContainer>
   );

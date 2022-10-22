@@ -1,16 +1,12 @@
-import Text, { TextType } from '../atoms/Text';
-import SideBar from '../organisms/Sidebar';
-import RoadmapContainer from '../templates/RoadmapContainer';
-import GlobalContainer from '../templates/GlobalContainer';
+import Text, { TextType } from '../components/atoms/Text';
+import RoadmapContainer from '../components/templates/RoadmapContainer';
+import GlobalContainer from '../components/templates/GlobalContainer';
 
 const Home = () => {
   return (
     <GlobalContainer>
-        <SideBar />
-        <div className="HomeContainer global-container-page">
-            <Text text="Product Roadmap" textType={TextType.Headline} />
-            <RoadmapContainer />
-        </div>
+        <Text text="Product Roadmap" textType={TextType.Headline} />
+        <RoadmapContainer />
     </GlobalContainer>
   );
 }

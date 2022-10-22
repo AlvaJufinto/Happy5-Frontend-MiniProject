@@ -5,8 +5,8 @@ import Text, { TextType } from '../atoms/Text';
 import ImageContainer from '../atoms/ImageContainer';
 import IconText from '../molecules/IconText';
 
-import WeightIcon from "../assets/icon/weight-icon.svg"
-import MoreIcon from "../assets/icon/more-icon.svg";
+import WeightIcon from "../../assets/icon/weight-icon.svg"
+import MoreIcon from "../../assets/icon/more-icon.svg";
 
 interface IState {
   title: string,

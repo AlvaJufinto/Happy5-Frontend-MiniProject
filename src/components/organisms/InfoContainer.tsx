@@ -2,10 +2,10 @@ import { FC } from 'react';
 import styled from 'styled-components';
 
 import Text, { TextType } from '../atoms/Text';
-import InfoCard from './InfoCard';
 import ButtonIconText from '../molecules/ButtonIconText';
+import InfoCard from './InfoCard';
 
-import PlusIcon from "../assets/icon/plus-icon.svg";
+import PlusIcon from "../../assets/icon/plus-icon.svg";
 
 interface IState {
   year: string,
