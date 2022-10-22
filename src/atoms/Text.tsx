@@ -19,13 +19,13 @@ const StyledText = styled.p`
 
   &.Text-headline {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     color: ${props => props.theme.colors.black};
   }
 
   &.Text-title {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     color: ${props => props.theme.colors.black};
   }
 
@@ -36,7 +36,7 @@ const StyledText = styled.p`
   }
 
   &.Text-small {
-    font-size: 14px;
+    font-size: 12px;
     color: ${props => props.theme.colors.grey.primary};
   }
 

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components';
 
 import ImageContainer from '../atoms/ImageContainer';
-import Logo from "../assets/logo/logo-square.png";
+import Logo from "../assets/logo/logo-square.svg";
 
 
 const StyledSidebar = styled.div`

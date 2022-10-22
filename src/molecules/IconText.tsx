@@ -1,19 +1,26 @@
 import { FC } from 'react';
+import styled from 'styled-components';
+
+import Text, { TextType } from '../atoms/Text';
 import ImageContainer from '../atoms/ImageContainer';
 
 interface IState {
-  IconText: string,
+  text: string,
   logo: string;
 }
 
-const IconText: FC<IState> = ({ IconText, logo }) => {
+const StyledIconText = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`
+
+const IconText: FC<IState> = ({ text, logo }) => {
   return (
-    <button className={`IconText`}>
-        <ImageContainer image={logo} imageWidth="10px" />
-        <p className="IconText-Text">
-            {IconText}
-        </p>  
-    </button>
+    <StyledIconText>
+        <ImageContainer image={logo} imageWidth="20px" />
+        <Text text={text} textType={TextType.Small} />
+    </StyledIconText>
   );
 }
 

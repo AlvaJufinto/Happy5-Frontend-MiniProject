@@ -1,9 +1,8 @@
 import { FC } from 'react';
 
 import Text from '../atoms/Text';
-import ImageContainer from '../atoms/ImageContainer';
-import IconText from '../molecules/IconText';
 import SideBar from '../organisms/Sidebar';
+import RoadmapContainer from '../templates/RoadmapContainer';
 
 import { TextType } from './../atoms/Text';
 
@@ -11,7 +10,10 @@ const Home = () => {
   return (
     <div className="Home">
         <SideBar />
-        <Text text="Test" textType={TextType.Headline}  />
+        <div className="HomeContainer global-container-page">
+            <Text text="Product Roadmap" textType={TextType.Headline} />
+            <RoadmapContainer />
+        </div>
     </div>
   );
 }
